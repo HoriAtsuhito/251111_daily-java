@@ -54,13 +54,35 @@
 
 package day06.q02;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 class Main {
 
 	public static void main(String[] args) throws IOException {
-		/*ここから記入*/
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+		System.out.println("預金者情報を登録します。");
+		System.out.println("input name?");
+		String name = reader.readLine();
+		
+		System.out.println("input money?");
+		String str = reader.readLine();
+		int money = Integer.parseInt(str);
+
+		
+		
+		System.out.println("銀行に預金者情報を登録します。");
+
+		Depositor set = new Depositor();
+		set.setName(name);
+		set.setMoney(money);
+		
+		Bank bank = new Bank();
+		bank.setDepositor(set);
+
+		bank.setDepositor(set);
 	}
 
 }

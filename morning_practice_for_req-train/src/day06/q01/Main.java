@@ -39,7 +39,14 @@ package day06.q01;
 class Main {
 
 	public static void main(String[] args) {
-		/*ここから記入*/
+		Phone phonefee = new Phone();
+		
+		System.out.println("シェアード電話に加入しました");
+		phonefee.initFee();
+		phonefee.call();
+		phonefee.call();
+		
+		System.out.println("今月の電話料金は\\"+phonefee.getFee()+"です");
 
 	}
 
